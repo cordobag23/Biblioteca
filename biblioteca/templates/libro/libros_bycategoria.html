@@ -1,0 +1,15 @@
+<h1>libros pod categoria</h1>
+
+<p>
+    <form method="GET">{% csrf_token %}
+
+        <input type="text" id='kword' name="kword" placeholder="Buscar libro por categoria">
+    
+        <input type="submit" value="Buscar">
+
+        {% for lislibros in listalibroscategoria %}
+             <p>{{lislibros.titulo}}</p>
+        {% endfor %}
+
+    </form>
+</p>
