@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Libro
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 # Create your views here
 
@@ -29,3 +29,11 @@ class ListLibros2categoria(ListView):
             return Libro.objects.listar_libros_categoria(palabraclave)
         else:
             return Libro.objects.listar_libros_categoria(0)
+
+
+
+class Detalle_librDetailView(DetailView):
+    model = Libro
+    template_name = "libro/detail_libro.html"
+    context_object_name = 'detalleslibro'
+

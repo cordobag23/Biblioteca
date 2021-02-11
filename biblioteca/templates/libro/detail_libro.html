@@ -1,0 +1,20 @@
+<h1>Detalle del libro</h1>
+
+<p>{{detalleslibro.titulo}}</p>
+<p>{{detalleslibro.categoria}}</p>
+<p>{{detalleslibro.fecha}}</p>
+<p>{{detalleslibro.portada}}</p>
+<p>{{detalleslibro.visitas}}</p>
+
+
+<ul>
+    {% for dtllib in detalleslibro.autores.all %}
+  
+        <li>{{dtllib}}</li>
+    
+    {% endfor %}
+</ul>
+
+    
+
+
